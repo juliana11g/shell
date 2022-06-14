@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script that displays the visitor IP sorted
+
+awk '{print $1,$9}' apache-access.log | sort | uniq -c | sort -nr
