@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Bah script that verify if a file exist and if the file is a regular file
+
+i="school"
+
+if [ -e $i ];
+then
+	echo "school file exists"
+	if [ -s $i ];
+	then
+		echo "school file is not empty"
+	else
+		echo "school file is empty"
+	fi
+
+	if [ -f $i ];
+	then
+		echo "school is a regular file"
+	fi
+else
+	echo "school file does not exist"
+fi
